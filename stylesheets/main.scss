@@ -1,3 +1,8 @@
+$main-black: #182B2E;
+$base-white: #F9F9F9;
+$text-gray: #1A1A1A;
+$text-white: #fff;
+
 @font-face {
   font-family: 'din-light';
   src: url(../fonts/din-light.ttf);
@@ -39,9 +44,8 @@ section {
 
 #header {
   width: 100%;
-  overflow: hidden;
   padding: 6px 0;
-  position: fixed;
+  position: absolute;
   z-index: 2;
 }
 
@@ -53,7 +57,7 @@ section {
 
 nav {
   overflow: hidden;
-  padding-left: 560px;
+  padding-left: 800px;
 
   li {
     list-style: none;
@@ -65,34 +69,34 @@ nav {
     font-size: 24px;
     display: block;
     text-decoration: none;
-    color: #f9f9f9;
-    margin: 14px 10px 0;
-    transition: 0.3s;
+    color: $text-white;
+    margin: 10px;
+    transition: 0.1s;
     font-weight: 700;
 
     &:hover {
-      border-bottom: 3px solid #f9f9f9;
+      border-bottom: 3px solid $text-white;
     }
   }
 }
 
 .container {
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
 #home {
-  height: 850px;
+  height: 852px;
   text-align: center;
   background-image: url(../images/background01.jpg);
   background-color: #fff;
   background-size: cover;
   min-width: 920px;
   padding: 60px;
+  color: $text-white;
 
   h1 {
-    color: #fff;
     font-size: 90px;
     letter-spacing: 3px;
     margin-top: 370px;
@@ -100,11 +104,8 @@ nav {
   }
 
   h2 {
-
-    color: #fff;
     font-size: 45px;
     font-weight: 400;
-
   }
 }
 
@@ -118,4 +119,67 @@ section {
   margin: 30px 0;
   text-align: center;
   font-weight: 700;
+}
+
+#about {
+  margin: 0 auto;
+
+  h2 {
+    color: $main-black;
+  }
+
+  h3 {
+    color: $text-gray;
+    font-size: 26px;
+  }
+
+  .about-container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .about-item {
+    width: 340px;
+    height: 440px;
+    margin: 0 30px;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    float: left;
+    overflow: hidden;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+  }
+
+  .about-text-box {
+    height: 50%;
+    padding: 26px 28px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #808080;
+      font-size: 19px;
+      line-height: 1.6em;
+
+    }
+  }
+
+}
+
+
+.interest-container {
+  display: flex;
+  justify-content: center;
+}
+
+#story {
+  overflow: hidden;
 }
