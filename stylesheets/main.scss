@@ -1,6 +1,25 @@
+@font-face {
+  font-family: 'din-light';
+  src: url(../fonts/din-light.ttf);
+}
+
+@font-face {
+  font-family: 'din-medium';
+  src: url(../fonts/din-medium.ttf);
+}
+
+@font-face {
+  font-family: 'din-bold';
+  src: url(../fonts/DINNextLTPro-Bold.otf);
+}
+
+
 * {
   padding: 0;
   margin: 0;
+
+}
+
 body {
   // font-family: 'din-light',
 
@@ -13,8 +32,90 @@ body {
 }
 
 
-h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 60px;
-  font-weight: 100;
+section {
+  padding: 30px;
+  min-width: 1000px;
+}
+
+#header {
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0;
+  position: fixed;
+  z-index: 2;
+}
+
+#header h1 {
+  float: left;
+  color: #f9f9f9;
+  margin-right: 48px;
+}
+
+nav {
+  overflow: hidden;
+  padding-left: 560px;
+
+  li {
+    list-style: none;
+    float: left;
+    margin-top: 2px;
+  }
+
+  a {
+    font-size: 24px;
+    display: block;
+    text-decoration: none;
+    color: #f9f9f9;
+    margin: 14px 10px 0;
+    transition: 0.3s;
+    font-weight: 700;
+
+    &:hover {
+      border-bottom: 3px solid #f9f9f9;
+    }
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#home {
+  height: 850px;
+  text-align: center;
+  background-image: url(../images/background01.jpg);
+  background-color: #fff;
+  background-size: cover;
+  min-width: 920px;
+  padding: 60px;
+
+  h1 {
+    color: #fff;
+    font-size: 90px;
+    letter-spacing: 3px;
+    margin-top: 370px;
+
+  }
+
+  h2 {
+
+    color: #fff;
+    font-size: 45px;
+    font-weight: 400;
+
+  }
+}
+
+section {
+  padding: 30px;
+  min-width: 1000px;
+}
+
+.title {
+  font-size: 48px;
+  margin: 30px 0;
+  text-align: center;
+  font-weight: 700;
 }
