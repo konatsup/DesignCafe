@@ -155,11 +155,12 @@ nav a:hover {
 
 #story {
   width: 100%;
+  height: 976px;
 }
 
 #story .leftbox {
   width: 50%;
-  height: 976px;
+  height: 100%;
   background: url(../images/mind.jpg) 0 0 no-repeat;
   float: left;
   background-size: cover;
@@ -167,12 +168,27 @@ nav a:hover {
 
 #story .rightbox {
   width: 50%;
+  height: 100%;
   background-color: #182B2E;
   overflow: hidden;
+  color: #fff;
+}
+
+#story .rightbox .inner-box {
+  width: 450px;
+  margin-left: 150px;
+  margin-top: 200px;
 }
 
 #story .rightbox h2 {
-  font-size: 40px;
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+#story .rightbox p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 44px;
 }
 
 .interest-container {

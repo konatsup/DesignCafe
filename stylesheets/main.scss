@@ -176,10 +176,11 @@ nav {
 
 #story {
   width: 100%;
+  height: $display-default-height;
 
   .leftbox {
     width: 50%;
-    height: $display-default-height;
+    height: 100%;
     background: url(../images/mind.jpg) 0 0 no-repeat;
     float: left;
     background-size: cover;
@@ -188,12 +189,30 @@ nav {
 
   .rightbox {
     width: 50%;
+    height: 100%;
     background-color: $main-black;
     overflow: hidden;
+    color: $text-white;
+
+    .inner-box {
+      width: 450px;
+      margin-left: 150px;
+      margin-top: 200px;
+      ;
+    }
 
     h2 {
-      font-size: 40px;
+      font-size: 44px;
+      margin-bottom: 10px;
     }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 44px;
+    }
+
+
   }
 
 }
