@@ -48,7 +48,7 @@ section {
   width: 100%;
   padding: 6px 0;
   position: absolute;
-  z-index: 2;
+  z-index: 999;
 }
 
 #header h1 {
@@ -89,26 +89,73 @@ nav {
 }
 
 #home {
-  height: 852px;
+  height: 1000px;
   text-align: center;
-  background-image: url(../images/background01.jpg);
   background-color: #fff;
-  background-size: cover;
   min-width: $display-default-width;
-  padding: 60px;
   color: $text-white;
+  position: relative;
 
-  h1 {
-    font-size: 90px;
-    letter-spacing: 3px;
-    margin-top: 370px;
+  .viewer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    position: absolute;
+
+    ul {
+      text-align: left;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      li {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        position: absolute;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -100%);
+          object-fit: cover;
+        }
+      }
+    }
 
   }
 
-  h2 {
-    font-size: 45px;
-    font-weight: 400;
+  .title-container {
+    position: absolute;
+    z-index: 900;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    h1 {
+      font-size: 105px;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      font-size: 45px;
+      font-weight: 400;
+    }
+
   }
+
+
 }
 
 
@@ -181,7 +228,7 @@ nav {
   .left-box {
     width: 50%;
     height: 100%;
-    background: url(../images/mind.jpg) 0 0 no-repeat;
+    background: url(../images/mind.jpg) 0 50% no-repeat;
     float: left;
     background-size: cover;
 
