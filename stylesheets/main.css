@@ -287,6 +287,10 @@ nav a:hover {
   overflow: hidden;
 }
 
+#access .access-container .access-right-box .access-inner-right-box .inner-left-box {
+  width: 35%;
+}
+
 #access .access-container .access-right-box p {
   font-size: 21px;
   font-weight: 300;
@@ -321,4 +325,43 @@ footer {
   color: #ffffff;
   background: #182B2E;
   padding: 10px 0;
+}
+
+.fade-in-animation {
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-name: fade-in-animation;
+  -ms-animation-name: fade-in-animation;
+  animation-name: fade-in-animation;
+  visibility: visible !important;
+}
+
+@-webkit-keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
