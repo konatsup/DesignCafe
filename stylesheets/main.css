@@ -42,7 +42,7 @@ section {
 
 nav {
   overflow: hidden;
-  padding-left: 800px;
+  padding-left: 720px;
 }
 
 nav li {
@@ -147,7 +147,7 @@ nav a:hover {
 #about {
   margin: 0 auto;
   overflow: hidden;
-  padding: 70px 0 150px;
+  padding: 70px 0;
 }
 
 #about h2 {
@@ -195,6 +195,72 @@ nav a:hover {
   font-size: 19px;
   line-height: 1.6em;
   font-weight: 300;
+}
+
+#menu {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 70px 0 150px;
+}
+
+#menu h2 {
+  color: #182B2E;
+}
+
+#menu h3 {
+  color: #1A1A1A;
+  font-size: 26px;
+}
+
+#menu .menu-container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 50px 0;
+}
+
+#menu .menu-item {
+  margin: 0 40px;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+#menu .menu-item .menu-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#menu .menu-item p {
+  margin-top: 10px;
+  color: #182B2E;
+}
+
+#menu .more-button {
+  display: block;
+  width: 86px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 32px;
+  margin-top: 40px;
+  background: #182B2E;
+  color: #fff;
+  border: 1px solid #182B2E;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+#menu .more-button:hover {
+  background: #fff;
+  color: #182B2E;
 }
 
 #story {

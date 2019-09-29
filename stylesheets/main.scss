@@ -21,6 +21,29 @@ $display-default-width: 1200px;
   src: url(../fonts/DINNextLTPro-Bold.otf);
 }
 
+@mixin rich-button() {
+  display: block;
+  width: 86px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 32px;
+  margin-top: 40px;
+  background: $main-black;
+  color: $text-white;
+  border: 1px solid $main-black;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+
+
+  &:hover {
+    background: $text-white;
+    color: $main-black;
+  }
+}
+
+
 
 * {
   padding: 0;
@@ -59,7 +82,7 @@ section {
 
 nav {
   overflow: hidden;
-  padding-left: 800px;
+  padding-left: 720px;
 
   li {
     list-style: none;
@@ -169,7 +192,7 @@ nav {
 #about {
   margin: 0 auto;
   overflow: hidden;
-  padding: 70px 0 150px;
+  padding: 70px 0;
 
   h2 {
     color: $main-black;
@@ -217,6 +240,61 @@ nav {
       line-height: 1.6em;
       font-weight: 300;
     }
+  }
+
+}
+
+#menu {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 70px 0 150px;
+
+  h2 {
+    color: $main-black;
+  }
+
+  h3 {
+    color: $text-gray;
+    font-size: 26px;
+  }
+
+  .menu-container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 50px 0;
+
+  }
+
+  .menu-item {
+    margin: 0 40px;
+    // box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    float: left;
+    overflow: hidden;
+    text-align: center;
+
+    .menu-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+
+    }
+
+    p {
+      margin-top: 10px;
+      color: $main-black;
+
+    }
+
+  }
+
+  .more-button {
+    @include rich-button();
+    text-align: center;
   }
 
 }
@@ -338,28 +416,11 @@ nav {
   }
 
   .reservation-button {
-    display: block;
-    width: 86px;
-    margin: 0 auto;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 32px;
-    margin-top: 40px;
-    background: $main-black;
-    color: $text-white;
-    border: 1px solid $main-black;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.5s;
-
-
-    &:hover {
-      background: $text-white;
-      color: $main-black;
-    }
+    @include rich-button();
   }
-
 }
+
+
 
 footer {
   text-align: center;
@@ -367,6 +428,7 @@ footer {
   background: $main-black;
   padding: 10px 0;
 }
+
 
 
 .fade-in-animation {
