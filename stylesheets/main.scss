@@ -72,43 +72,46 @@ section {
   padding: 6px 0;
   position: absolute;
   z-index: 999;
-}
 
-#header h1 {
-  float: left;
-  color: #f9f9f9;
-  margin-right: 48px;
-}
-
-nav {
-  overflow: hidden;
-  padding-left: 720px;
-
-  li {
-    list-style: none;
-    float: left;
-    margin-top: 2px;
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
   }
 
-  a {
-    font-size: 24px;
-    display: block;
-    text-decoration: none;
-    color: $text-white;
-    margin: 10px;
-    transition: 0.1s;
-    font-weight: 700;
+  h1 {
+    float: left;
+    color: #f9f9f9;
+    margin-right: 48px;
+  }
 
-    &:hover {
-      border-bottom: 3px solid $text-white;
+
+
+  nav {
+    overflow: hidden;
+    padding-left: 720px;
+
+    li {
+      list-style: none;
+      float: left;
+      margin-top: 2px;
+    }
+
+    a {
+      font-size: 24px;
+      display: block;
+      text-decoration: none;
+      color: $text-white;
+      margin: 10px;
+      transition: 0.1s;
+      font-weight: 700;
+
+      &:hover {
+        border-bottom: 3px solid $text-white;
+      }
     }
   }
-}
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
 }
 
 #home {

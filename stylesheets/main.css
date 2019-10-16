@@ -34,24 +34,30 @@ section {
   z-index: 999;
 }
 
+#header .container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
 #header h1 {
   float: left;
   color: #f9f9f9;
   margin-right: 48px;
 }
 
-nav {
+#header nav {
   overflow: hidden;
   padding-left: 720px;
 }
 
-nav li {
+#header nav li {
   list-style: none;
   float: left;
   margin-top: 2px;
 }
 
-nav a {
+#header nav a {
   font-size: 24px;
   display: block;
   text-decoration: none;
@@ -61,14 +67,8 @@ nav a {
   font-weight: 700;
 }
 
-nav a:hover {
+#header nav a:hover {
   border-bottom: 3px solid #fff;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
 }
 
 #home {
