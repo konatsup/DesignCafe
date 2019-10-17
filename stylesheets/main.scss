@@ -165,7 +165,7 @@ body {
     width: 100%;
     margin: 0 auto 6px;
     height: 3px;
-    background: #000;
+    background: $base-white;
     transition: all 0.2s ease-in-out;
 
     &:last-child {
