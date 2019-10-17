@@ -237,6 +237,13 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 479px) {
+  .title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+
 #about {
   margin: 0 auto;
   overflow: hidden;
