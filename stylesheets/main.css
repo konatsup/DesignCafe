@@ -699,6 +699,12 @@ footer {
   padding: 10px 0;
 }
 
+@media screen and (max-width: 479px) {
+  footer {
+    font-size: 12px;
+  }
+}
+
 .fade-in-animation {
   -webkit-animation-fill-mode: both;
   -ms-animation-fill-mode: both;

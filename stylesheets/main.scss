@@ -811,16 +811,16 @@ section {
   }
 }
 
-
-
 footer {
   text-align: center;
   color: #ffffff;
   background: $main-black;
   padding: 10px 0;
+
+  @include mq(sm) {
+    font-size: 12px;
+  }
 }
-
-
 
 .fade-in-animation {
   -webkit-animation-fill-mode: both;
