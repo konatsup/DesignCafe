@@ -4,9 +4,10 @@ $text-gray: #1A1A1A;
 $text-white: #fff;
 $light-gray: #808080;
 $display-default-height: 976px;
-$display-default-width: 1200px;
+$display-default-max-width: 1200px;
 
-$breakpoints: ('sm': 'screen and (max-width: 479px)',
+$breakpoints: ('tn': 'screen and (max-width: 399px)',
+  'sm': 'screen and (max-width: 479px)',
   'md': 'screen and (max-width: 895px)',
   'lg': 'screen and (max-width: 1023px)',
   'xl': 'screen and (max-width: 1199px)',
@@ -76,7 +77,7 @@ body {
 
 
 section {
-  // min-width: $display-default-width;
+  // min-width: $display-default-max-width;
 }
 
 #header {
@@ -341,7 +342,7 @@ section {
 #about {
   margin: 0 auto;
   overflow: hidden;
-  padding: 70px 0;
+  padding: 70px 0 40px;
 
   h2 {
     color: $main-black;
@@ -353,30 +354,30 @@ section {
   }
 
   .about-container {
-    width: 1200px;
+    max-width: $display-default-max-width;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .about-item {
-    width: 340px;
-    height: 440px;
+    max-width: 340px;
+    max-height: 440px;
     margin: 0 30px;
+    margin-bottom: 60px;
     border-radius: 8px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-    float: left;
-    overflow: hidden;
   }
 
   .about-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
-
   }
 
   .about-text-box {
-    height: 50%;
     padding: 26px 28px;
 
     h3 {
@@ -391,6 +392,37 @@ section {
     }
   }
 
+  @include mq(xl) {
+    .about-container {
+      max-width: 820px;
+    }
+  }
+
+  @include mq(lg) {
+    .about-container {
+      max-width: 425px;
+    }
+  }
+
+  @include mq(tn) {
+    .about-image {
+      height: 50%;
+      min-height: 170px;
+    }
+
+    .about-text-box {
+      height: 50%;
+
+      h3 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+  }
 }
 
 #menu {
