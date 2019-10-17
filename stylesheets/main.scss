@@ -259,6 +259,7 @@ body {
 
     &:hover {
       border-bottom: 0 solid $text-white;
+      background-color: rgba($light-gray, 0.2);
     }
 
   }
