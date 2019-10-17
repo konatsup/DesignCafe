@@ -23,10 +23,6 @@ body {
   font-weight: 400;
 }
 
-section {
-  min-width: 1200px;
-}
-
 #header {
   width: 100%;
   padding: 6px 0;
@@ -35,47 +31,128 @@ section {
 }
 
 #header .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
-#header h1 {
-  float: left;
-  color: #f9f9f9;
-  margin-right: 48px;
+@media screen and (max-width: 479px) {
+  #header nav ul {
+    display: none;
+  }
+  #header nav li {
+    list-style: none;
+    margin-top: 2px;
+  }
+  #header nav a {
+    font-size: 24px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    transition: 0.1s;
+    font-weight: 700;
+  }
+  #header nav a:hover {
+    border-bottom: 3px solid #fff;
+  }
+  #header nav #nav-toggle div {
+    position: relative;
+  }
+  #header nav #nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #666;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+  }
+  #header nav #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  #header nav #nav-toggle span:nth-child(2) {
+    top: 11px;
+  }
+  #header nav #nav-toggle span:nth-child(3) {
+    top: 22px;
+  }
 }
 
-#header nav {
-  overflow: hidden;
-  padding-left: 720px;
+@media screen and (max-width: 895px) {
+  #header nav ul {
+    display: none;
+  }
+  #header nav li {
+    list-style: none;
+    margin-top: 2px;
+  }
+  #header nav a {
+    font-size: 24px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    transition: 0.1s;
+    font-weight: 700;
+  }
+  #header nav a:hover {
+    border-bottom: 3px solid #fff;
+  }
+  #header nav #nav-toggle div {
+    position: relative;
+  }
+  #header nav #nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #666;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+  }
+  #header nav #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  #header nav #nav-toggle span:nth-child(2) {
+    top: 11px;
+  }
+  #header nav #nav-toggle span:nth-child(3) {
+    top: 22px;
+  }
 }
 
-#header nav li {
-  list-style: none;
-  float: left;
-  margin-top: 2px;
-}
-
-#header nav a {
-  font-size: 24px;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  margin: 10px;
-  transition: 0.1s;
-  font-weight: 700;
-}
-
-#header nav a:hover {
-  border-bottom: 3px solid #fff;
+@media screen and (max-width: 1199px) {
+  #header nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #header nav li {
+    list-style: none;
+    margin-top: 2px;
+  }
+  #header nav a {
+    font-size: 24px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    transition: 0.1s;
+    font-weight: 700;
+  }
+  #header nav a:hover {
+    border-bottom: 3px solid #fff;
+  }
 }
 
 #home {
-  height: 1000px;
+  height: 100vh;
   text-align: center;
   background-color: #fff;
-  min-width: 1200px;
   color: #fff;
   position: relative;
 }
@@ -84,8 +161,6 @@ section {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  text-align: left;
-  overflow: hidden;
   position: absolute;
 }
 
@@ -128,13 +203,31 @@ section {
 }
 
 #home .title-container h1 {
-  font-size: 105px;
+  font-size: 104px;
   letter-spacing: 3px;
 }
 
 #home .title-container h2 {
   font-size: 45px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 895px) {
+  #home .title-container h1 {
+    font-size: 90px;
+  }
+  #home .title-container h2 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #home .title-container h1 {
+    font-size: 70px;
+  }
+  #home .title-container h2 {
+    font-size: 24px;
+  }
 }
 
 .title {

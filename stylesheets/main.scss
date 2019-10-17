@@ -6,6 +6,18 @@ $light-gray: #808080;
 $display-default-height: 976px;
 $display-default-width: 1200px;
 
+$breakpoints: ('sm': 'screen and (max-width: 479px)',
+  'md': 'screen and (max-width: 895px)',
+  'lg': 'screen and (max-width: 1023px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 @font-face {
   font-family: 'din-light';
   src: url(../fonts/din-light.ttf);
@@ -64,7 +76,7 @@ body {
 
 
 section {
-  min-width: $display-default-width;
+  // min-width: $display-default-width;
 }
 
 #header {
@@ -74,51 +86,165 @@ section {
   z-index: 999;
 
   .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
   }
 
-  h1 {
-    float: left;
-    color: #f9f9f9;
-    margin-right: 48px;
-  }
-
-
-
   nav {
-    overflow: hidden;
-    padding-left: 720px;
 
-    li {
-      list-style: none;
-      float: left;
-      margin-top: 2px;
+    @include mq(sm) {
+
+      ul {
+        // display: flex;
+        // justify-content: flex-end;
+        display: none;
+      }
+
+      li {
+        list-style: none;
+        // float: left;
+        margin-top: 2px;
+      }
+
+      a {
+        font-size: 24px;
+        display: block;
+        text-decoration: none;
+        color: $text-white;
+        margin: 10px;
+        transition: 0.1s;
+        font-weight: 700;
+
+        &:hover {
+          border-bottom: 3px solid $text-white;
+        }
+      }
+
+      #nav-toggle div {
+        position: relative;
+      }
+
+      #nav-toggle span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #666;
+        left: 0;
+        -webkit-transition: .35s ease-in-out;
+        -moz-transition: .35s ease-in-out;
+        transition: .35s ease-in-out;
+      }
+
+      #nav-toggle span:nth-child(1) {
+        top: 0;
+      }
+
+      #nav-toggle span:nth-child(2) {
+        top: 11px;
+      }
+
+      #nav-toggle span:nth-child(3) {
+        top: 22px;
+      }
+
     }
 
-    a {
-      font-size: 24px;
-      display: block;
-      text-decoration: none;
-      color: $text-white;
-      margin: 10px;
-      transition: 0.1s;
-      font-weight: 700;
+    @include mq(md) {
 
-      &:hover {
-        border-bottom: 3px solid $text-white;
+      ul {
+        // display: flex;
+        // justify-content: flex-end;
+        display: none;
+      }
+
+      li {
+        list-style: none;
+        // float: left;
+        margin-top: 2px;
+      }
+
+      a {
+        font-size: 24px;
+        display: block;
+        text-decoration: none;
+        color: $text-white;
+        margin: 10px;
+        transition: 0.1s;
+        font-weight: 700;
+
+        &:hover {
+          border-bottom: 3px solid $text-white;
+        }
+      }
+
+      #nav-toggle div {
+        position: relative;
+      }
+
+      #nav-toggle span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #666;
+        left: 0;
+        -webkit-transition: .35s ease-in-out;
+        -moz-transition: .35s ease-in-out;
+        transition: .35s ease-in-out;
+      }
+
+      #nav-toggle span:nth-child(1) {
+        top: 0;
+      }
+
+      #nav-toggle span:nth-child(2) {
+        top: 11px;
+      }
+
+      #nav-toggle span:nth-child(3) {
+        top: 22px;
+      }
+
+    }
+
+    @include mq(xl) {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      li {
+        list-style: none;
+        // float: left;
+        margin-top: 2px;
+      }
+
+      a {
+        font-size: 24px;
+        display: block;
+        text-decoration: none;
+        color: $text-white;
+        margin: 10px;
+        transition: 0.1s;
+        font-weight: 700;
+
+        &:hover {
+          border-bottom: 3px solid $text-white;
+        }
       }
     }
+
+
   }
 
 }
 
 #home {
-  height: 1000px;
+  height: 100vh;
   text-align: center;
   background-color: #fff;
-  min-width: $display-default-width;
   color: $text-white;
   position: relative;
 
@@ -126,8 +252,6 @@ section {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    text-align: left;
-    overflow: hidden;
     position: absolute;
 
     ul {
@@ -170,13 +294,35 @@ section {
     transform: translate(-50%, -50%);
 
     h1 {
-      font-size: 105px;
+      font-size: 104px;
       letter-spacing: 3px;
     }
 
     h2 {
       font-size: 45px;
       font-weight: 400;
+    }
+
+    @include mq(md) {
+      h1 {
+        font-size: 90px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+    }
+
+    @include mq(sm) {
+      h1 {
+        font-size: 70px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
     }
 
   }
