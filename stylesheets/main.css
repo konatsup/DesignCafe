@@ -322,7 +322,7 @@ body {
 #menu {
   margin: 0 auto;
   overflow: hidden;
-  padding: 70px 0 150px;
+  padding: 70px 0 130px;
 }
 
 #menu h2 {
@@ -395,14 +395,18 @@ body {
 
 #story {
   width: 100%;
+}
+
+#story .story-container {
   height: 976px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #story .left-box {
   width: 50%;
   height: 100%;
   background: url(../images/mind.jpg) 0 50% no-repeat;
-  float: left;
   background-size: cover;
 }
 
@@ -410,12 +414,11 @@ body {
   width: 50%;
   height: 100%;
   background-color: #182B2E;
-  overflow: hidden;
   color: #fff;
 }
 
 #story .right-box .inner-box {
-  width: 450px;
+  max-width: 450px;
   margin-left: 150px;
   margin-top: 200px;
 }
@@ -429,6 +432,81 @@ body {
   font-size: 22px;
   font-weight: 300;
   line-height: 44px;
+}
+
+@media screen and (max-width: 1199px) {
+  #story .left-box {
+    background-position: center;
+  }
+  #story .right-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #story .right-box .inner-box {
+    width: 70%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #story .right-box h2 {
+    font-size: 44px;
+  }
+  #story .right-box p {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  #story .story-container {
+    height: 1561.6px;
+  }
+  #story .left-box {
+    width: 100%;
+    height: 50%;
+  }
+  #story .right-box {
+    width: 100%;
+    height: 50%;
+  }
+  #story .right-box .inner-box {
+    max-width: 530px;
+    width: 75%;
+  }
+  #story .right-box h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  #story .right-box p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #story .story-container {
+    height: 1366.4px;
+  }
+  #story .right-box h2 {
+    font-size: 42px;
+  }
+  #story .right-box p {
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  #story .story-container {
+    height: 1268.8px;
+  }
+  #story .right-box h2 {
+    font-size: 40px;
+  }
+  #story .right-box p {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 #access {

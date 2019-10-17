@@ -428,7 +428,7 @@ section {
 #menu {
   margin: 0 auto;
   overflow: hidden;
-  padding: 70px 0 150px;
+  padding: 70px 0 130px;
 
   h2 {
     color: $main-black;
@@ -487,13 +487,17 @@ section {
 
 #story {
   width: 100%;
-  height: $display-default-height;
+
+  .story-container {
+    height: $display-default-height;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .left-box {
     width: 50%;
     height: 100%;
     background: url(../images/mind.jpg) 0 50% no-repeat;
-    float: left;
     background-size: cover;
 
   }
@@ -502,14 +506,12 @@ section {
     width: 50%;
     height: 100%;
     background-color: $main-black;
-    overflow: hidden;
     color: $text-white;
 
     .inner-box {
-      width: 450px;
+      max-width: 450px;
       margin-left: 150px;
       margin-top: 200px;
-      ;
     }
 
     h2 {
@@ -522,9 +524,102 @@ section {
       font-weight: 300;
       line-height: 44px;
     }
-
-
   }
+
+  @include mq(xl) {
+    .left-box {
+      background-position: center;
+    }
+
+    .right-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .inner-box {
+        width: 70%;
+        margin: 0;
+      }
+    }
+  }
+
+  @include mq(lg) {
+    .right-box {
+      h2 {
+        font-size: 44px;
+      }
+
+      p {
+        font-size: 19px;
+      }
+    }
+  }
+
+  @include mq(md) {
+    .story-container {
+      height: $display-default-height * 1.6;
+    }
+
+    .left-box {
+      width: 100%;
+      height: 50%;
+    }
+
+    .right-box {
+      width: 100%;
+      height: 50%;
+
+      .inner-box {
+        max-width: 530px;
+        width: 75%;
+      }
+
+      h2 {
+        font-size: 48px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include mq(sm) {
+    .story-container {
+      height: $display-default-height * 1.4;
+    }
+
+    .right-box {
+
+      h2 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  @include mq(tn) {
+    .story-container {
+      height: $display-default-height * 1.3;
+    }
+
+    .right-box {
+      h2 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
 
 }
 
