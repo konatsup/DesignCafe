@@ -707,7 +707,7 @@ section {
   @include mq(xl) {
     .access-container {
       max-width: 600px;
-      width: 84%;
+      width: 95%;
 
       .access-right-box {
         width: 100%;
@@ -767,10 +767,6 @@ section {
 
   @include mq(sm) {
     .access-container {
-      .access-left-box {
-        height: 300px;
-      }
-
       .access-right-box {
         .access-inner-box {
           margin: 30px auto 10px;
@@ -799,7 +795,7 @@ section {
     .access-container {
       .access-left-box {
         width: 100%;
-        height: 240px;
+        height: 360px;
       }
 
       .access-right-box {
