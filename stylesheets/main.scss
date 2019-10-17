@@ -93,7 +93,7 @@ section {
   z-index: 999;
 
   .container {
-    max-width: 1200px;
+    max-width: $display-default-max-width;
     margin: 0 auto;
     position: relative;
   }
@@ -281,10 +281,19 @@ section {
           position: absolute;
           top: 100%;
           left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -100%);
+          -ms-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
           object-fit: cover;
+        }
+
+        @include mq(sm) {
+          img {
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
         }
       }
     }
