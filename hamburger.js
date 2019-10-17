@@ -1,14 +1,14 @@
 //ハンバーガーメニュー
 $(function () {
-  $('.el_humburger').on('click', function () {
+  $('.el_hamburger').on('click', function () {
     spNavInout();
   });
 });
 
 //spナビ開く処理
 function spNavIn() {
-  $('body').removeClass('js_humburgerClose');
-  $('body').addClass('js_humburgerOpen');
+  $('body').removeClass('js_hamburgerClose');
+  $('body').addClass('js_hamburgerOpen');
   $(".navigation").addClass("js_appear");
   $(".navigation").css({
     opacity: 0
@@ -24,8 +24,8 @@ function spNavOut() {
   $(".navigation").animate({
     opacity: 0
   }, 200)
-  $('body').removeClass('js_humburgerOpen');
-  $('body').addClass('js_humburgerClose');
+  $('body').removeClass('js_hamburgerOpen');
+  $('body').addClass('js_hamburgerClose');
   setTimeout(function () {
     $(".navigation").removeClass("js_appear");
   }, 200);
@@ -37,7 +37,7 @@ function spNavInout() {
   if ($('body.spNavFreez').length) {
     return false;
   }
-  if ($('body').hasClass('js_humburgerOpen')) {
+  if ($('body').hasClass('js_hamburgerOpen')) {
     spNavOut();
   } else {
     spNavIn();

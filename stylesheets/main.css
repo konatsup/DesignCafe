@@ -30,7 +30,7 @@ body {
   z-index: 1000;
 }
 
-.el_humburger {
+.el_hamburger {
   display: none;
 }
 
@@ -81,7 +81,7 @@ body {
     z-index: 1000;
     padding: 0;
   }
-  .el_humburger {
+  .el_hamburger {
     display: block;
     position: absolute;
     top: 0px;
@@ -94,7 +94,7 @@ body {
     cursor: pointer;
     pointer-events: auto;
   }
-  .el_humburger > span {
+  .el_hamburger > span {
     display: block;
     width: 100%;
     margin: 0 auto 6px;
@@ -102,36 +102,36 @@ body {
     background: #F9F9F9;
     transition: all 0.2s ease-in-out;
   }
-  .el_humburger > span:last-child {
+  .el_hamburger > span:last-child {
     margin-bottom: 0;
   }
-  .js_humburgerOpen .el_humburger > span {
+  .js_hamburgerOpen .el_hamburger > span {
     background: #000;
   }
-  .js_humburgerOpen .el_humburger > span.top {
+  .js_hamburgerOpen .el_hamburger > span.top {
     transform: translateY(9px) rotate(-45deg);
   }
-  .js_humburgerOpen .el_humburger > span.middle {
+  .js_hamburgerOpen .el_hamburger > span.middle {
     opacity: 0;
   }
-  .js_humburgerOpen .el_humburger > span.bottom {
+  .js_hamburgerOpen .el_hamburger > span.bottom {
     transform: translateY(-9px) rotate(45deg);
   }
-  .el_humburgerButton.el_humburgerButton__close {
+  .el_hamburgerButton.el_hamburgerButton__close {
     top: 2%;
     right: 2%;
   }
-  .el_humburgerButton__close > span {
+  .el_hamburgerButton__close > span {
     display: block;
     width: 35px;
     margin: 0 auto;
     height: 4px;
     background: #fff;
   }
-  .el_humburgerButton__close > span.el_humburgerLineTop {
+  .el_hamburgerButton__close > span.el_hamburgerLineTop {
     transform: translateY(5px) rotate(-45deg);
   }
-  .el_humburgerButton__close > span.el_humburgerLineBottom {
+  .el_hamburgerButton__close > span.el_hamburgerLineBottom {
     transform: translateY(-6px) rotate(45deg);
   }
   .navigation {
