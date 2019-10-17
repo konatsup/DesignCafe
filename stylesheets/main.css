@@ -190,6 +190,7 @@ body {
 
 #home {
   height: 100vh;
+  max-height: 1114px;
   text-align: center;
   background-color: #fff;
   color: #fff;
