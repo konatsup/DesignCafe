@@ -50,10 +50,15 @@ $breakpoints: ('tn': 'screen and (max-width: 399px)',
   text-decoration: none;
   transition: 0.5s;
 
-
   &:hover {
     background: $text-white;
     color: $main-black;
+  }
+
+  @include mq(md) {
+    width: 96px;
+    font-size: 18px;
+    padding: 16px 48px;
   }
 }
 
