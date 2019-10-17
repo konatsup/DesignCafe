@@ -48,18 +48,18 @@ function spNavInout() {
 
 var scrollBlockerFlag;
 
-function scrollBlocker(flag) {
-  if (flag) {
-    scrollpos = $(window).scrollTop();
-    $('body').addClass('js_fixed').css({
-      'top': -scrollpos
-    });
-    scrollBlockerFlag = true;
-  } else {
-    $('body').removeClass('js_fixed').css({
-      'top': 0
-    });
-    window.scrollTo(0, scrollpos);
-    scrollBlockerFlag = false;
-  }
-}
+// function scrollBlocker(flag) {
+//   if (flag) {
+//     scrollpos = $(window).scrollTop();
+//     $('body').addClass('js_fixed').css({
+//       'top': -scrollpos
+//     });
+//     scrollBlockerFlag = true;
+//   } else {
+//     $('body').removeClass('js_fixed').css({
+//       'top': 0
+//     });
+//     window.scrollTo(0, scrollpos);
+//     scrollBlockerFlag = false;
+//   }
+// }
