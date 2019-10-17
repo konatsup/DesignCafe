@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'din-light';
   src: url(../fonts/din-light.ttf);
@@ -812,22 +811,11 @@ footer {
 }
 
 .ripple__effect.is-black {
-  /* 任意 */
   background: #182B2E;
 }
 
 .ripple__effect.is-show {
-  /* 必須 */
-  animation: ripple 0.75s ease-out;
+  animation: ripple 1.75s ease-out;
 }
 
-@keyframes ripple {
-  /* 必須 */
-  from {
-    opacity: 1;
-  }
-  to {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
+@keyframes ripple {}
