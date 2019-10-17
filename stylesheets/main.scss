@@ -8,6 +8,7 @@ $display-default-max-width: 1200px;
 
 $breakpoints: ('tn': 'screen and (max-width: 399px)',
   'sm': 'screen and (max-width: 479px)',
+  'mp': 'screen and (max-width: 710px)',
   'md': 'screen and (max-width: 895px)',
   'lg': 'screen and (max-width: 1023px)',
   'xl': 'screen and (max-width: 1199px)',
@@ -619,12 +620,9 @@ section {
       }
     }
   }
-
-
 }
 
 #access {
-
   margin: 0 auto;
   padding: 70px 0 60px;
 
@@ -638,34 +636,29 @@ section {
   }
 
   .access-container {
-    width: 1200px;
+    max-width: $display-default-max-width;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
-
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     border-radius: 8px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
 
-    .access-left-box {
-      float: left;
-    }
-
     .access-right-box {
-
       width: 50%;
       height: 100%;
       color: $text-white;
-      overflow: hidden;
 
       .access-inner-box {
         width: 450px;
         margin-left: 80px;
         margin-top: 66px;
+        display: flex;
+        flex-wrap: wrap;
       }
 
-
       h4 {
-        float: left;
         color: $text-gray;
         font-size: 30px;
         width: 35%;
@@ -673,13 +666,12 @@ section {
 
       .access-inner-right-box {
         width: 65%;
+        margin-bottom: 18px;
         overflow: hidden;
 
         .inner-left-box {
           width: 35%;
-
         }
-
       }
 
       p {
@@ -688,16 +680,129 @@ section {
         line-height: 41px;
         color: $light-gray;
         float: left;
-
       }
-
     }
-
-
   }
 
   .reservation-button {
     @include rich-button();
+  }
+
+  @include mq(xl) {
+    .access-container {
+      max-width: 600px;
+      width: 84%;
+
+      .access-right-box {
+        width: 100%;
+
+        .access-inner-box {
+          width: 73%;
+          margin: 60px auto 40px;
+        }
+      }
+    }
+  }
+
+  // マップ用
+  @include mq(mp) {
+    .access-container {
+      .access-left-box {
+        height: 380px;
+      }
+
+      .access-right-box {
+
+        .access-inner-box {
+          display: flex;
+          justify-content: center;
+          margin: 50px auto 30px;
+          width: 100%;
+        }
+
+        h4 {
+          width: 100%;
+          font-size: 28px;
+          margin-bottom: 10px;
+          text-align: center;
+
+        }
+
+        p {
+          font-size: 19px;
+          text-align: left;
+          line-height: 30px;
+        }
+
+        .access-inner-right-box {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 350px;
+          margin-bottom: 28px;
+
+          .inner-left-box {
+            min-width: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(sm) {
+    .access-container {
+      .access-left-box {
+        height: 300px;
+      }
+
+      .access-right-box {
+        .access-inner-box {
+          margin: 30px auto 10px;
+        }
+
+        h4 {
+          font-size: 23px;
+          margin-bottom: 6px;
+
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .access-inner-right-box {
+          .inner-left-box {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(tn) {
+    .access-container {
+      .access-left-box {
+        width: 100%;
+        height: 240px;
+      }
+
+      .access-right-box {
+        h4 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+
+        .access-inner-right-box {
+          .inner-left-box {
+            min-width: 80px;
+          }
+        }
+      }
+    }
   }
 }
 

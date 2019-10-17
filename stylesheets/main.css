@@ -524,33 +524,31 @@ body {
 }
 
 #access .access-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   border-radius: 8px;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-#access .access-container .access-left-box {
-  float: left;
 }
 
 #access .access-container .access-right-box {
   width: 50%;
   height: 100%;
   color: #fff;
-  overflow: hidden;
 }
 
 #access .access-container .access-right-box .access-inner-box {
   width: 450px;
   margin-left: 80px;
   margin-top: 66px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #access .access-container .access-right-box h4 {
-  float: left;
   color: #1A1A1A;
   font-size: 30px;
   width: 35%;
@@ -558,6 +556,7 @@ body {
 
 #access .access-container .access-right-box .access-inner-right-box {
   width: 65%;
+  margin-bottom: 18px;
   overflow: hidden;
 }
 
@@ -592,6 +591,89 @@ body {
 #access .reservation-button:hover {
   background: #fff;
   color: #182B2E;
+}
+
+@media screen and (max-width: 1199px) {
+  #access .access-container {
+    max-width: 600px;
+    width: 84%;
+  }
+  #access .access-container .access-right-box {
+    width: 100%;
+  }
+  #access .access-container .access-right-box .access-inner-box {
+    width: 73%;
+    margin: 60px auto 40px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  #access .access-container .access-left-box {
+    height: 380px;
+  }
+  #access .access-container .access-right-box .access-inner-box {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 30px;
+    width: 100%;
+  }
+  #access .access-container .access-right-box h4 {
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  #access .access-container .access-right-box p {
+    font-size: 19px;
+    text-align: left;
+    line-height: 30px;
+  }
+  #access .access-container .access-right-box .access-inner-right-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin-bottom: 28px;
+  }
+  #access .access-container .access-right-box .access-inner-right-box .inner-left-box {
+    min-width: 140px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #access .access-container .access-left-box {
+    height: 300px;
+  }
+  #access .access-container .access-right-box .access-inner-box {
+    margin: 30px auto 10px;
+  }
+  #access .access-container .access-right-box h4 {
+    font-size: 23px;
+    margin-bottom: 6px;
+  }
+  #access .access-container .access-right-box p {
+    font-size: 15px;
+  }
+  #access .access-container .access-right-box .access-inner-right-box .inner-left-box {
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  #access .access-container .access-left-box {
+    width: 100%;
+    height: 240px;
+  }
+  #access .access-container .access-right-box h4 {
+    font-size: 22px;
+  }
+  #access .access-container .access-right-box p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  #access .access-container .access-right-box .access-inner-right-box .inner-left-box {
+    min-width: 80px;
+  }
 }
 
 footer {
