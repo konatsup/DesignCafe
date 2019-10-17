@@ -335,31 +335,32 @@ body {
 }
 
 #menu .menu-container {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 280px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   border-radius: 8px;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-  padding: 50px 0;
+  padding: 60px 0 20px;
 }
 
 #menu .menu-item {
-  margin: 0 40px;
-  float: left;
-  overflow: hidden;
+  margin: 0 40px 40px;
   text-align: center;
 }
 
 #menu .menu-item .menu-image {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 #menu .menu-item p {
-  margin-top: 10px;
+  margin-top: 14px;
   color: #182B2E;
 }
 
@@ -383,6 +384,13 @@ body {
 #menu .more-button:hover {
   background: #fff;
   color: #182B2E;
+}
+
+@media screen and (max-width: 1199px) {
+  #menu .menu-container {
+    max-width: 820px;
+    width: 84%;
+  }
 }
 
 #story {
