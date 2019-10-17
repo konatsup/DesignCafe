@@ -292,6 +292,7 @@ section {
   }
 
   .title-container {
+    width: 90%;
     position: absolute;
     z-index: 900;
     top: 50%;
@@ -323,11 +324,11 @@ section {
 
     @include mq(sm) {
       h1 {
-        font-size: 70px;
+        font-size: 50px;
       }
 
       h2 {
-        font-size: 24px;
+        font-size: 21px;
       }
 
     }

@@ -193,6 +193,7 @@ body {
 }
 
 #home .title-container {
+  width: 90%;
   position: absolute;
   z-index: 900;
   top: 50%;
@@ -223,10 +224,10 @@ body {
 
 @media screen and (max-width: 479px) {
   #home .title-container h1 {
-    font-size: 70px;
+    font-size: 50px;
   }
   #home .title-container h2 {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
 
