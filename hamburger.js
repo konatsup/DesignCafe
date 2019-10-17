@@ -16,7 +16,7 @@ function spNavIn() {
   $(".navigation").animate({
     opacity: 1
   }, 200);
-  scrollBlocker(true);
+  // scrollBlocker(true);
 }
 
 //spナビ閉じる処理
@@ -29,7 +29,7 @@ function spNavOut() {
   setTimeout(function () {
     $(".navigation").removeClass("js_appear");
   }, 200);
-  scrollBlocker(false);
+  // scrollBlocker(false);
 }
 
 //spナビ開閉処理
@@ -46,7 +46,7 @@ function spNavInout() {
 
 //ナビ向けスクロール無効化処理
 
-var scrollBlockerFlag;
+// var scrollBlockerFlag;
 
 // function scrollBlocker(flag) {
 //   if (flag) {
