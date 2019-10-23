@@ -388,17 +388,21 @@ body {
   font-size: 26px;
 }
 
-#menu .menu-container {
+#menu .menu-box {
   max-width: 1200px;
   min-width: 280px;
   margin: 0 auto;
   position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 60px 0 44px;
+}
+
+#menu .menu-container {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  border-radius: 8px;
-  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-  padding: 60px 0 20px;
 }
 
 #menu .menu-item {
@@ -433,6 +437,7 @@ body {
   text-decoration: none;
   transition: 0.5s;
   text-align: center;
+  margin-top: 24px;
 }
 
 #menu .more-button:hover {
@@ -449,7 +454,7 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  #menu .menu-container {
+  #menu .menu-box {
     max-width: 820px;
     width: 84%;
   }

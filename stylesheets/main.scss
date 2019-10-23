@@ -483,18 +483,21 @@ body {
     font-size: 26px;
   }
 
-  .menu-container {
+  .menu-box {
     max-width: $display-default-max-width;
     min-width: 280px;
     margin: 0 auto;
     position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 60px 0 44px;
+  }
+
+  .menu-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border-radius: 8px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-    padding: 60px 0 20px;
-
   }
 
   .menu-item {
@@ -518,10 +521,11 @@ body {
   .more-button {
     @include rich-button();
     text-align: center;
+    margin-top: 24px;
   }
 
   @include mq(xl) {
-    .menu-container {
+    .menu-box {
       max-width: 820px;
       width: 84%;
     }
