@@ -424,6 +424,19 @@ body {
   .about-text-box {
     padding: 26px 28px;
 
+    dt {
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: $text-gray;
+      font-weight: 600;
+    }
+
+    dd {
+      color: $light-gray;
+      font-size: 19px;
+      line-height: 1.6em;
+      font-weight: 300;
+    }
     h3 {
       margin-bottom: 10px;
     }
@@ -457,11 +470,11 @@ body {
     .about-text-box {
       height: 50%;
 
-      h3 {
+      dt {
         font-size: 21px;
       }
 
-      p {
+      dd {
         font-size: 14px;
       }
     }

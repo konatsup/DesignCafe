@@ -336,6 +336,20 @@ body {
   padding: 26px 28px;
 }
 
+#about .about-text-box dt {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+#about .about-text-box dd {
+  color: #808080;
+  font-size: 19px;
+  line-height: 1.6em;
+  font-weight: 300;
+}
+
 #about .about-text-box h3 {
   margin-bottom: 10px;
 }
@@ -367,10 +381,10 @@ body {
   #about .about-text-box {
     height: 50%;
   }
-  #about .about-text-box h3 {
+  #about .about-text-box dt {
     font-size: 21px;
   }
-  #about .about-text-box p {
+  #about .about-text-box dd {
     font-size: 14px;
   }
 }
