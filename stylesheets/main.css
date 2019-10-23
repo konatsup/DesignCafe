@@ -47,6 +47,7 @@ body {
 }
 
 .navigation_item {
+  list-style-type: none;
   margin-top: 2px;
 }
 
