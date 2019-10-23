@@ -20,21 +20,6 @@ $breakpoints: ('tn': 'screen and (max-width: 399px)',
   }
 }
 
-@font-face {
-  font-family: 'din-light';
-  src: url(../fonts/din-light.ttf);
-}
-
-@font-face {
-  font-family: 'din-medium';
-  src: url(../fonts/din-medium.ttf);
-}
-
-@font-face {
-  font-family: 'din-bold';
-  src: url(../fonts/DINNextLTPro-Bold.otf);
-}
-
 @mixin rich-button() {
   display: block;
   width: 86px;
@@ -71,11 +56,6 @@ $breakpoints: ('tn': 'screen and (max-width: 399px)',
 }
 
 body {
-  // font-family: 'din-light',
-
-  // font-family: 'din-medium',
-
-  // font-family: 'din-bold',
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
