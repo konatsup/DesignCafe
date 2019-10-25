@@ -3,6 +3,12 @@ $(function () {
   $('.el_hamburger').on('click', function () {
     spNavInout();
   });
+
+  $(".navigation_item a").on('click', function () {
+    if (matchMedia('(max-width: 895px)').matches) {
+      spNavOut();
+    }
+  });
 });
 
 //spナビ開く処理
